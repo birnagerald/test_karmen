@@ -5,6 +5,12 @@
 $ npm i
 ```
 
+## Configuration
+
+```bash
+$ add api url in .env file
+```
+
 ## Running the app
 
 ```bash
