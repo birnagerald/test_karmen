@@ -45,6 +45,8 @@
   border: solid #282c34;
 }
 
+/* pokemon bloc */
+
 #flex-container > .flex-item {
 	flex: auto;
 }

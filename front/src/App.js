@@ -2,12 +2,14 @@ import React from "react";
 import "./App.css";
 import { useState } from "react";
 const App = () => {
+
+  /* state declaration */
   const [pokemonName, setPokemonName] = useState("");
+  const [pokemon, setPokemon] = useState(null);
 
-  const [pokemon, setPokemon] = React.useState(null);
-
+  /* fetching function to get a pokemon */
   const searchPokemon = () => {
-    fetch(`/${pokemonName}`)
+    fetch(`/${pokemonName === "" ? 1 : pokemonName}`)
       .then((res) => res.json())
       .then((json) => {
         json.statusCode === 400 ? setPokemon(null) : setPokemon(json);
