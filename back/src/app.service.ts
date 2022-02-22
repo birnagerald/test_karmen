@@ -6,10 +6,9 @@ const fetch = require('node-fetch');
 @Injectable()
 export class AppService {
   async getPokemon({ id }: DtoGetPokemon): Promise<Pokemon> {
-    console.log(id);
-    const t: Pokemon = await fetch(
+    const pokemon: Pokemon = await fetch(
       `https://pokeapi.co/api/v2/pokemon/${id}/`,
     ).then((response: { json: () => Pokemon }) => response.json());
-    return t;
+    return pokemon;
   }
 }
